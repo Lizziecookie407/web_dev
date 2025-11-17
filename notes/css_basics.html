@@ -1,0 +1,65 @@
+<!-- EH CSS Basics 
+ 
+What does CSS stand for?
+ Cascading Style Sheets
+If I have the same thing written 2 times, which one will happen?
+ the last one said
+What is a selector?
+ tells us what you are changing
+What is a declaration?
+What is a property?
+ the blue key (what is being changed in the selector)
+What is a value?
+ what it's being changed to
+What is used instead of spaces?
+ dashes -
+How do you center text?
+ text-align: center;
+What are the 3 ways to change color on a page? (the 3 different formats, not what can be changed)
+ rgb/rgba, hexadecimal, color name
+Why would you not want to use a color's name to change the color? 
+ its not specific
+Where can you find the specific colors you want?
+ in the slider once you have set a color
+What are the different ways you can change the size of something? 
+ font-size, width, em, veiw width(wv) or veiw height(hv)
+Why would you want to set a size that automatically adjusts?
+ so it looks good on different size screens and everything will be visable, no matter what someone is using.
+-->
+
+<!DOCTYPE html5> 
+<html>
+    <head>
+        <title>HTML Basics</title>
+        <meta charset="UTF-8">
+        <style>
+            body{ /* tag name */
+                background-color: blanchedalmond;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color:rgb(0, 84, 180)
+            }
+            .small{
+                font-size: 10px;
+                text-decoration: underline wavy orangered 5px;
+            }
+            #first{ /* class name*/
+                font-size: 2 vw;
+                text-align: center; /* text align has to be on a whole segment */
+                border: outset 5px rgb(19, 150, 19);
+                border-radius: 30px;
+                background-color: rgba(0, 255, 42, 0.384); /* rgba has opacacy */
+                box-shadow: 10px 5px 5px black;
+                width: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="first">HTML Notes!</h1>
+        <h2>Sub heading</h2>
+        <h6 class="small">Tiny header</h6>
+        <p><span >gdsfidsaghiurhjbkjfdnb;gfdhoiergknkjnbpisuerygtkjhgfdkjlfdgh</span></p>
+        <p>This is for a <strong>paragraph</strong></p>
+        <p><u>East</u> is up<br>You could <em>bring down my</em><br>level of concern</p> 
+        <a href="https://spinning.fish/" target="_blank">This is a link bibity bobbiti boo</a>
+    </body>
+</html>
