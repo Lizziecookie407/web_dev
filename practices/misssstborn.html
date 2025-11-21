@@ -5,10 +5,18 @@
     <head>
         <title>Eliza is awesome and likes Mistborn</title>
         <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Tomorrow&display=swap" rel="stylesheet">
         <style>
+            .tomorrow-regular {
+                font-family: "Tomorrow", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+            }
             body{
                 background-color: rgb(154, 168, 190);
-                color:rgb(83, 49, 49)
+                font-family: "Tomorrow"
             }
             h1{
                 color: rgb(78, 0, 68);
@@ -33,9 +41,26 @@
                 text-align: right;
             }
             img{
-                height: 50%;
+                height: 40vw;
                 box-shadow: 10px 5px 20px black;
+                margin: 10px;
             }
+            p{
+                color:rgb(83, 49, 49);
+            }
+            #list{
+                color:rgb(83, 49, 49);
+                margin: -10px;
+            }
+            #images{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            #symbols{
+                width: 30%;
+                margin-bottom: 10px;
+            }
+
         </style>
     </head>
     <body>
@@ -60,7 +85,8 @@
         <h3>Magic system</h3>
         <p>A main part of the book is the magic system, called Allomancy. It is based on sixteen differnt types of metals. 
             The idea is that each metal gives you a differnt power. These are a few of them.</p>
-        <ul>
+        <div id="list">
+            <ul>
             <li>Tin - enhanced senses</li>
             <li>Pewter - enhanced strenth</li>
             <li>Steel - the ability to allomantically push on mental</li>
@@ -68,14 +94,25 @@
             <li>Zinc - the ability to pull, or riot, other's emotions</li>
             <li>Brass - the ability to push, or soothe, other's emotions</li>
         </ul>
-        <!-- <img src="https://i.pinimg.com/1200x/b2/ff/fe/b2fffe9f6500ebda9e69ed6f92d476c9.jpg" alt="key of metal symbols"/> -->
-        <h3>Characters</h3>
-        <h4>Vin</h4>
-        <img src="https://preview.redd.it/no-spoilers-this-absolutely-gorgeous-art-of-vin-i-recently-v0-2rg8f0vm11gc1.png?auto=webp&s=da045fff8b37a2aff4291afa5c0d20367e56bb29" alt="Vin"height="500"/>
-        <h4>Kelsier</h4>
-        <img src="https://i.pinimg.com/736x/dc/80/66/dc806699eb7e3fa03815f85aab459473.jpg" alt="Kelsier"/>
-        <h4>Sazed</h4>
-        <img src="https://ih1.redbubble.net/image.2687670258.3327/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="Sazed"/>
+        </div>
         
+        <div id="symbols">
+            <img src="https://i.pinimg.com/1200x/b2/ff/fe/b2fffe9f6500ebda9e69ed6f92d476c9.jpg" alt="key of metal symbols"/>
+        </div>
+        <h3>Characters</h3>
+        <div id="images"></div>
+        <div id="vin">
+            <h4>Vin</h4>
+            <img src="https://preview.redd.it/no-spoilers-this-absolutely-gorgeous-art-of-vin-i-recently-v0-2rg8f0vm11gc1.png?auto=webp&s=da045fff8b37a2aff4291afa5c0d20367e56bb29" alt="Vin"height="500"/>
+        </div>
+        <div id="kelsier">
+            <h4>Kelsier</h4>
+            <img src="https://i.pinimg.com/736x/dc/80/66/dc806699eb7e3fa03815f85aab459473.jpg" alt="Kelsier"/>
+        </div>
+        <div id="sazed">
+            <h4>Sazed</h4>
+            <img src="https://ih1.redbubble.net/image.2687670258.3327/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="Sazed"/>
+        </div>
+        </div>
     </body>
 </html>
