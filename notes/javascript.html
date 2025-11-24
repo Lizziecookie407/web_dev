@@ -1,0 +1,93 @@
+<!-- EH 6th Java Script Notes 
+
+What is the purpose of JavaScript in web development?
+ make a webpage interactive
+How do you access HTML elements with JavaScript?
+ docuement.getElementById() - gives access to HTML and searches for the specific id in the parentheses
+What are the mouse events you have access to in HTML?
+ onclick, oncontextmenue (rightclick), onbclick (double click), onmouseenter, onmouseout, onmousedown (any button pressed), onmousemove(mouse moves over), onmouseover, onmouseup(mouse button is released)
+How can you change CSS using JavaScript?
+How do you create an alert message using JavaScript?
+
+
+-->
+
+<DOCTYPE! html>
+<html lang="en">
+    <head>
+        <title>Java script</title>
+        <meta charset="UTF-8">
+        <meta name="veiwport" content="width=device-width, initial-scale=1.0">
+        <style>
+            img{
+                height: 100px;
+                width: auto;
+            }
+            #right{
+                width: 50vw;
+                margin-left: 3px;
+            }
+            #content-wrapper{
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+            }
+            button{
+                margin: 5px;
+                padding: 10px;
+            }
+            #one-wrapper{
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            #hidden{
+                display: none;
+            }
+        </style>
+        <script>
+            images = ["https://www.azoquantum.com/images/Article_Images/ImageForArticle_549_17288689857007544.jpg", "https://gifdb.com/images/high/speedy-spinning-gray-fish-umqmj8y1qgpfh5d7.gif/", "https://www.azoquantum.com/images/Article_Images/ImageForArticle_549_17288689857007544.jpg"]
+            index = 0
+            showing = "none"
+            function show(){
+                if(showing == "none" ){
+                    docuement.getElementById("hidden").style.display = "block"
+                    showing = "block"
+                    document.getElementById("button").innerHTML = "Show less"
+                }else{
+                    docuement.getElementById("hidden").style.display = "none"
+                    showing = "none"
+                    document.getElementById("button").innerHTML = "Show more"
+                }
+            }
+            function change(){
+                document.getElementById("one").src = images[index]
+                index += 1
+                if(index >= images.length){
+                    index=0
+                }
+            }
+            function color(){
+                document.getElementById("content-wrapper").style.color = document.getElementById("choice").value
+            }
+            function basic(){
+                document.getElementById("content-wrapper").style.color = "black" 
+            }
+        </script>
+    </head>
+    <body>
+        <h1 onmouseenter={color()} onmouseout={basic()}>Gummy Bears</h1>
+        <input type="color" id="choice"/>
+        <button id="button" onclick ={show()}>Show more</button>
+        <div id="content-wrapper">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <div id="hidden">
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            <div id="right">
+                <div id="one-wrapper">
+                <img id="one" onmouseover={change()} src="https://www.azoquantum.com/images/Article_Images/ImageForArticle_549_17288689857007544.jpg" alt="feeling closer to the stars"/> </div>
+                <img id="two" src="https://gifdb.com/images/high/speedy-spinning-gray-fish-umqmj8y1qgpfh5d7.gif/" alt="FISHY!!"/>
+            </div>
+        </div>
+    </body>
