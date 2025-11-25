@@ -48,12 +48,13 @@ alert("the color has changedd back!")
             index = 0
             showing = "none"
             function show(){
-                if(showing == "none" ){
-                    docuement.getElementById("hidden").style.display = "block"
+                document.getElementById("check").innerHTML = "Working"
+                if(showing == "none"){
+                    document.getElementById("hidden").style.display = "block"
                     showing = "block"
                     document.getElementById("button").innerHTML = "Show less"
                 }else{
-                    docuement.getElementById("hidden").style.display = "none"
+                    document.getElementById("hidden").style.display = "none"
                     showing = "none"
                     document.getElementById("button").innerHTML = "Show more"
                 }
@@ -76,7 +77,8 @@ alert("the color has changedd back!")
     <body>
         <h1 onmouseenter={color()} onmouseout={basic()}>Gummy Bears</h1>
         <input type="color" id="choice"/>
-        <button id="button" onclick ={show()}>Show more</button>
+        <p id="check"></p>
+        <button id="button" onclick={show()}>Show more</button>
         <div id="content-wrapper">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>

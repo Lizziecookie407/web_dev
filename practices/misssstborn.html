@@ -60,8 +60,43 @@
                 width: 30%;
                 margin-bottom: 10px;
             }
+            button{
+                margin-top: 30px;
+                padding: 5px;
+                background-color: #92833f;
+                color: white;
+                border-color: #c7b66d;
+            }
+            #hidden{
+                display: none;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
 
         </style>
+        <script>
+            images = ["https://uploads.coppermind.net/thumb/Sazed_by_Diego_L%C3%B3pez.jpeg/1200px-Sazed_by_Diego_L%C3%B3pez.jpeg", "https://ih1.redbubble.net/image.2687670258.3327/flat,750x,075,f-pad,750x1000,f8f8f8.jpg"]
+            index = 0
+            showing = "none"
+            function show(){
+                if(showing == "none"){
+                    document.getElementById("hidden").style.display = "block"
+                    showing = "block"
+                    document.getElementById("button").innerHTML = "Click here to hide spoilers >:3"
+                }else{
+                    document.getElementById("hidden").style.display = "none"
+                    showing = "none"
+                    document.getElementById("button").innerHTML = "Click here for some fun spoilers >:3"
+                }
+            }
+            function change(){
+                document.getElementById("one").src = images[index]
+                index += 1
+                if(index >= images.length){
+                    index=0
+                }
+            }
+        </script>
     </head>
     <body>
         <h1>Mistborrrrrrrnnnn</h1>
@@ -100,7 +135,7 @@
             <img src="https://i.pinimg.com/1200x/b2/ff/fe/b2fffe9f6500ebda9e69ed6f92d476c9.jpg" alt="key of metal symbols"/>
         </div>
         <h3>Characters</h3>
-        <div id="images"></div>
+        <div id="images">
         <div id="vin">
             <h4>Vin</h4>
             <img src="https://preview.redd.it/no-spoilers-this-absolutely-gorgeous-art-of-vin-i-recently-v0-2rg8f0vm11gc1.png?auto=webp&s=da045fff8b37a2aff4291afa5c0d20367e56bb29" alt="Vin"height="500"/>
@@ -110,9 +145,16 @@
             <img src="https://i.pinimg.com/736x/dc/80/66/dc806699eb7e3fa03815f85aab459473.jpg" alt="Kelsier"/>
         </div>
         <div id="sazed">
-            <h4>Sazed</h4>
-            <img src="https://ih1.redbubble.net/image.2687670258.3327/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="Sazed"/>
+            <h4>Sazed- hover for more aura</h4>
+            <img id="one" onmouseover={change()} src="https://uploads.coppermind.net/thumb/Sazed_by_Diego_L%C3%B3pez.jpeg/1200px-Sazed_by_Diego_L%C3%B3pez.jpeg" alt="Sazed"/>
         </div>
+        </div>
+        <button id="button" onclick ={show()}>Click here for some fun spoilers >:3</button>
+        <div id="hidden">
+            <div><p>dun dun duuuuuun</p></div>
+            <div id="lr">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgW5A5dxm0u5P1vNkyiKDLSzZvryJv46-iUQ&s" alt="The Lord Ruler"/>
+            </div>
         </div>
     </body>
 </html>
