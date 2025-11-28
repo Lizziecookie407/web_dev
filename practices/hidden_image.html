@@ -1,0 +1,84 @@
+<!-- EH Hidden Image -->
+
+<DOCTYPE! html>
+<html lang="en">
+    <head>
+        <title>Hidden Image</title>
+        <meta charset="UTF-8">
+        <meta name="veiwport" content="width=device-width, initial-scale=1.0">
+        <style>
+            img{
+                height: 100px;
+                width: auto;
+            }
+            /* #right{
+                width: 50vw;
+                margin-left: 3px;
+            }
+            #content-wrapper{
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+            } */
+            #hidden{
+                display: none;
+            }
+            li{
+                padding: 5px;
+                border: groove 5px rgb(133, 204, 227);
+                border-radius: 30px;
+                background-color: rgb(255, 255, 255);
+            }
+            h1{
+                color:rgb(16, 8, 70);
+                font-family: fantasy;
+                letter-spacing: .01cap;
+                font-weight: 300;
+            }
+            h2{
+                color:rgb(16, 8, 70);
+                font-family: fantasy;
+                letter-spacing: .01cap;
+                font-weight: 300;
+            }
+        </style>
+        <script>
+            showing = "none"
+            function show(){
+                if(showing == "none"){
+                    document.getElementById("hidden").style.display = "block"
+                    showing = "block"
+                    /*document.getElementById("button").innerHTML = "Show less"*/
+                }else{
+                    document.getElementById("hidden").style.display = "none"
+                    showing = "none"
+                    /*document.getElementById("button").innerHTML = "Show more"*/
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <!--<button id="button" onclick={show()}>Show more</button>-->
+        <div id="content-wrapper">
+                <img id="thgttg" src="https://www.syfy.com/sites/syfy/files/2020/04/hitchhikers-guide.jpeg" alt="thgttg"/>
+                <h1>What is the answer to the ultamate quesiton of Life, the Universe and Everyhting?</h1>
+                <h2>Hover to choose the correct answer!</h2>
+                <p>A picture will apear when your mouse is over the right one.</p>
+            <ol>
+            <div id="wrong">
+                <li>Love</li>
+                <li>Getting to Heaven</li>
+            </div>
+            <div onmouseenter=[show()] onmouseleave=[show()] id= "right">
+                <li>42 <br></li>
+            </div>
+            <div id="wrong">
+                <li>idk, just doing whatever you want</li>
+            </div>
+            </ol>
+        </div>
+        <p>Choose wisely. Also, everyone should know this. I feel like the meaning of life is a very important matter that everyone should have an answer too. And it's so simple. I wonder what the world would be like knowing that the only thing that matters is--</p>
+        <div id="hidden">
+            <img id="correct" src="https://thumbs.dreamstime.com/b/correct-rubber-stamp-word-correct-inside-illustration-109025952.jpg" alt="correct"/>
+            <p>--that matters is 42.</p>
+        </div>
+    </body>
