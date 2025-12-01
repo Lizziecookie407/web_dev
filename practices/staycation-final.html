@@ -1,0 +1,165 @@
+<!-- EH 6th Staycation Final-->
+
+<!DOCTYPE html5>
+<html>
+    <head>
+        <title>Utah Isn't Boring</title>
+        <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kedebideri&display=swap" rel="stylesheet">
+        <style>
+            .kedebideri-regular {
+            font-family: "Kedebideri", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            }
+            body{
+                background-color: rgb(167, 142, 113);
+                font-family: "Kedebideri"
+            }
+            h1{
+                color: rgb(27, 42, 43);
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                text-align: center;
+                text-decoration: underline solid rgb(27, 42, 43) 3px;
+                text-shadow: 5px 1px 9px black;
+            }
+            h2{
+                color:rgb(0, 0, 0);
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                background-color: white;
+                width: 50vw;
+                border: outset 5px rgb(19, 150, 19);
+                border-color: #000000;
+                text-align: center;
+            }
+            h3{
+                font-family: 'Kedebideri', Georgia, 'Times New Roman', Times, serif;
+                color:rgb(48, 51, 54);
+            }
+            h4{
+                color:rgb(83, 49, 49);
+                text-decoration: underline rgb(83, 49, 49) 2px;
+            }
+            h6{
+                color:rgb(0, 0, 0);
+                text-align: right;
+            }
+            img{
+                height: 40vw;
+                box-shadow: 10px 5px 20px black;
+                margin: 10px;
+            }
+            p{
+                color:rgb(83, 49, 49);
+            }
+            #list{
+                color:rgb(83, 49, 49);
+                margin: -10px;
+            }
+            #images{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            #symbols{
+                width: 30%;
+                margin-bottom: 10px;
+            }
+            button{
+                margin-top: 30px;
+                padding: 5px;
+                background-color: #000000;
+                color: white;
+                border-color: #4e4e4e;
+            }
+            #hidden{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                display: none;
+            }
+            #one{
+                background-color: white;
+            }
+
+        </style>
+        <script>
+            images = ["#", "#"]
+            index = 0
+            showing = "none"
+            function show(){
+                if(showing == "none"){
+                    document.getElementById("hidden").style.display = "block"
+                    showing = "block"
+                    document.getElementById("button").innerHTML = "Click here to hide spoilers >:3"
+                }else{
+                    document.getElementById("hidden").style.display = "none"
+                    showing = "none"
+                    document.getElementById("button").innerHTML = "Click here for some fun spoilers >:3"
+                }
+            }
+            function change(){
+                document.getElementById("one").src = images[index]
+                index += 1
+                if(index >= images.length){
+                    index=0
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Utah Isn't Boring</h1>
+        <h2>VERY INFORMATIVE SITE BY ELOIZA</h2>
+        <h6>Reading this?</h6>
+        <h3>Look at all the things to do!</h3>
+        
+        <div id="images">
+
+        <div id="one">
+            <h4>Vin</h4>
+            <img src="#" alt="c"/>
+
+        </div>
+        <div id="one">
+            <h4>Kelsier</h4>
+            <img src="#" alt="a"/>
+        </div>
+
+        <div id="one">
+            <h4>Sazed- hover for more aura</h4>
+            <img id="one" onmouseover={change()} src="#" alt="d"/>
+        </div>
+        </div>
+
+        <h3>doop</h3>
+        <p>bla bla bla</p>
+        <h3>Thing 47</h3>
+        <p>bla bla bla</p>
+        <h3>Thing 90</h3>
+        <p>bla bla bla <a href="#" target="blank_">link</a> bla bla bla</p>
+
+        <h3>Thing 8</h3>
+        <p>bla bla lba</p>
+        <div id="list">
+            <ul>
+            <li>Tin</li>
+            <li>Pewter</li>
+            <li>Steel</li>
+            <li>Iron</li>
+            <li>Zinc</li>
+            <li>Brasss</li>
+        </ul>
+        </div>
+        <div id="symbols">
+            <img src="#" alt="a"/>
+        </div>
+
+        <button id="button" onclick ={show()}>Click here for some fun spoilers >:3</button>
+        <div id="hidden">
+            <div><p>hidden text</p></div>
+            <div id="lr">
+            <img src="#" alt="e"/>
+            </div>
+        </div>
+    </body>
+</html>
