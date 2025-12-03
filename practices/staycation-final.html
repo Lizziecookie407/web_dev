@@ -46,9 +46,9 @@
                 text-align: right;
             }
             img{
-                width: 40vw;
-                box-shadow: 10px 5px 20px black;
+                height: 90%;
                 margin: 10px;
+                justify-content: center;
             }
             p{
                 color:rgb(83, 49, 49);
@@ -60,6 +60,10 @@
             #images{
                 display: grid;
                 grid-template-columns: 1fr 1fr;
+            }
+            #symbols{
+                width: 30%;
+                margin-bottom: 10px;
             }
             button{
                 margin-top: 30px;
@@ -75,17 +79,12 @@
             }
             #one{
                 background-color: white;
-                justify-items: center;
-                margin-right: 5px;
-                border: outset 5px rgb(0, 0, 0);
-                box-shadow: 5px 5px 15px black;
+                margin: 5px;
+                box-shadow: 10px 5px 20px black;
             }
-            #two{
-                background-color: white;
-                justify-items: center;
-                margin-left: 5px;
-                border: outset 5px rgb(0, 0, 0);
-                box-shadow: 5px 5px 15px black;
+            #a{
+                height: 100px;
+                width: auto;
             }
 
         </style>
@@ -138,6 +137,7 @@
 
         <h3>Thing 8</h3>
         <p>bla bla lba</p>
+
         <div id="list">
             <ul>
             <li>Tin</li>
@@ -146,9 +146,10 @@
             <li>Iron</li>
             <li>Zinc</li>
             <li>Brasss</li>
-        </ul>
+            </ul>
         </div>
-        <div id="symbols">
+
+        <div id="a">
             <img src="#" alt="a"/>
         </div>
 
@@ -162,5 +163,6 @@
             </div>
 
         </div>
+
     </body>
 </html>
