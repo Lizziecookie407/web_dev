@@ -15,39 +15,38 @@
             font-style: normal;
             }
             body{
-                background-color: rgba(134, 126, 115, 0.808);
+                background-color: rgba(201, 169, 124, 0.808);
                 font-family: "Kedebideri"
             }
             h1{
                 color: rgb(27, 42, 43);
                 font-family: Georgia, 'Times New Roman', Times, serif;
-                text-align: center;
-                text-decoration: underline solid rgb(27, 42, 43) 3px;
-                text-shadow: 5px 1px 9px black;
-            }
-            h2{
-                color:rgb(0, 0, 0);
-                font-family: Georgia, 'Times New Roman', Times, serif;
                 background-color: white;
-                width: 50vw;
-                border: outset 5px rgb(19, 150, 19);
+                border: outset 5px rgb(134, 134, 134);
                 border-color: #000000;
                 text-align: center;
+            }
+            h2{
+                color:rgb(83, 49, 49);
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                text-align: center;
+                text-decoration: underline dashed rgb(83, 49, 49) 3px;
             }
             h3{
                 font-family: 'Kedebideri', Georgia, 'Times New Roman', Times, serif;
                 color:rgb(48, 51, 54);
+                text-decoration: underline double rgb(48, 51, 54);
             }
             h4{
                 color:rgb(83, 49, 49);
-                text-decoration: underline rgb(83, 49, 49) 2px;
+                text-decoration: underline dashed rgb(83, 49, 49) 2px;
             }
             h6{
                 color:rgb(0, 0, 0);
                 text-align: right;
             }
             img{
-                height: 40vw;
+                width: 40vw;
                 box-shadow: 10px 5px 20px black;
                 margin: 10px;
             }
@@ -60,11 +59,7 @@
             }
             #images{
                 display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-            }
-            #symbols{
-                width: 30%;
-                margin-bottom: 10px;
+                grid-template-columns: 1fr 1fr;
             }
             button{
                 margin-top: 30px;
@@ -80,22 +75,33 @@
             }
             #one{
                 background-color: white;
+                justify-items: center;
+                margin-right: 5px;
+                border: outset 5px rgb(0, 0, 0);
+                box-shadow: 5px 5px 15px black;
+            }
+            #two{
+                background-color: white;
+                justify-items: center;
+                margin-left: 5px;
+                border: outset 5px rgb(0, 0, 0);
+                box-shadow: 5px 5px 15px black;
             }
 
         </style>
         <script>
-            images = ["#", "#"]
+            images = ["https://getinspiredeveryday.com/wp-content/uploads/2022/03/Things-to-do-in-Capitol-Reef-National-Park-Get-Inspired-Everyday-7.jpg", "https://cdn1.matadornetwork.com/blogs/1/2015/03/Dead-Horse-Point-State-Park-Utah-560x420.jpg"]
             index = 0
             showing = "none"
             function show(){
                 if(showing == "none"){
                     document.getElementById("hidden").style.display = "block"
                     showing = "block"
-                    document.getElementById("button").innerHTML = "Click here to hide spoilers >:3"
+                    document.getElementById("button").innerHTML = "Less"
                 }else{
                     document.getElementById("hidden").style.display = "none"
                     showing = "none"
-                    document.getElementById("button").innerHTML = "Click here for some fun spoilers >:3"
+                    document.getElementById("button").innerHTML = "More"
                 }
             }
             function change(){
@@ -109,34 +115,26 @@
     </head>
     <body>
         <h1>Utah Isn't Boring</h1>
-        <h2>VERY INFORMATIVE SITE BY ELOIZA</h2>
-        <h6>Reading this?</h6>
+        <h2>Capitol Reef National Park</h2>
+        <h6>Pretty cool place</h6>
         <h3>Look at all the things to do!</h3>
         
         <div id="images">
 
         <div id="one">
-            <h4>idk</h4>
-            <img src="#" alt="c"/>
-
-        </div>
-        <div id="one">
-            <h4>idk again</h4>
-            <img src="#" alt="a"/>
+            <h4>Cool place</h4>
+            <img src="https://capitolreefcountry.com/wp-content/uploads/2021/04/Fruita-District-1200-x-800.jpg" alt="b"/>
         </div>
 
-        <div id="one">
-            <h4>idk and hover too</h4>
-            <img id="one" onmouseover={change()} src="#" alt="d"/>
-        </div>
+        <div id="two">
+            <h4>That could be you!</h4>
+            <img onmouseover={change()} src="https://getinspiredeveryday.com/wp-content/uploads/2022/03/Things-to-do-in-Capitol-Reef-National-Park-Get-Inspired-Everyday-7.jpg" alt="a"/>
         </div>
 
-        <h3>doop</h3>
-        <p>bla bla bla</p>
-        <h3>Thing 47</h3>
-        <p>bla bla bla</p>
-        <h3>Thing 90</h3>
-        <p>bla bla bla <a href="#" target="blank_">link</a> bla bla bla</p>
+        </div>
+
+        <h3>What the freak is it?</h3>
+        <p>Capitol Reef is located in south-central Utah. it is known for its unique geology, rich cultural history, and spectacular dark night skies. It preserves the Waterpocket Fold, a nearly 100-mile-long geologic monocline, or "wrinkle" in the Earth's crust, that exposes layers of rock dating back millions of years. <a href="#" target="blank_">link</a></p>
 
         <h3>Thing 8</h3>
         <p>bla bla lba</p>
@@ -154,13 +152,15 @@
             <img src="#" alt="a"/>
         </div>
 
-        <button id="button" onclick ={show()}>Click here for some fun spoilers >:3</button>
+        <button id="button" onclick ={show()}>More</button>
+
         <div id="hidden">
-            <div><p>hidden text</p>
-            </div>
-            <div id="lr">
+            <div><p>hidden text</p></div>
+
+            <div>
             <img src="#" alt="e"/>
             </div>
+
         </div>
     </body>
 </html>
