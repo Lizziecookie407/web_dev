@@ -19,7 +19,7 @@
                 font-family: "Kedebideri"
             }
             h1{
-                color: rgb(27, 42, 43);
+                color: rgba(34, 78, 75, 0.507);
                 font-family: Georgia, 'Times New Roman', Times, serif;
                 background-color: white;
                 border: outset 5px rgb(134, 134, 134);
@@ -46,8 +46,8 @@
                 text-align: right;
             }
             img{
-                height: 100px;
-                width: auto;
+                height: auto;
+                width: 40vw;
                 margin: 10px;
                 justify-content: center;
             }
@@ -69,13 +69,11 @@
             button{
                 margin-top: 30px;
                 padding: 5px;
-                background-color: #000000;
+                background-color: rgba(34, 78, 75, 0.507);
                 color: white;
-                border-color: #4e4e4e;
+                border-color: rgb(134, 134, 134);
             }
             #hidden{
-                display: grid;
-                grid-template-columns: 1fr 1fr;
                 display: none;
             }
             #one{
@@ -84,7 +82,7 @@
                 margin-right: 5px;
                 border: outset 5px rgb(0, 0, 0);
                 box-shadow: 5px 5px 15px black;
-                max-width: 90%;
+                width: 90%;
             }
             #two{
                 background-color: white;
@@ -94,25 +92,43 @@
                 box-shadow: 5px 5px 15px black;
                 width: 90%;
             }
+            a{
+                color: rgb(34, 78, 75);
+            }
+            #cookie{
+                border: double 8px rgba(34, 78, 75, 0.507);
+            }
+            #three{
+                background-color: white;
+                justify-items: center;
+                margin-left: 5px;
+                border: outset 5px rgb(0, 0, 0);
+                box-shadow: 5px 5px 15px black;
+                width: 90%;
+            }
+            #hidden-wrapper{
+                display: grid;
+                grid-template-columns: 1fr 1fr
+            }
 
         </style>
         <script>
-            images = ["https://getinspiredeveryday.com/wp-content/uploads/2022/03/Things-to-do-in-Capitol-Reef-National-Park-Get-Inspired-Everyday-7.jpg", "https://cdn1.matadornetwork.com/blogs/1/2015/03/Dead-Horse-Point-State-Park-Utah-560x420.jpg"]
+            images = ["https://getinspiredeveryday.com/wp-content/uploads/2022/03/Things-to-do-in-Capitol-Reef-National-Park-Get-Inspired-Everyday-7.jpg", "https://www.nps.gov/common/uploads/grid_builder/care/crop16_9/2639D6A5-1DD8-B71B-0B08637B2CF33A3F.jpg?width=640&quality=90&mode=crop"]
             index = 0
             showing = "none"
             function show(){
                 if(showing == "none"){
                     document.getElementById("hidden").style.display = "block"
                     showing = "block"
-                    document.getElementById("button").innerHTML = "Less"
+                    document.getElementById("button").innerHTML = "Show less"
                 }else{
                     document.getElementById("hidden").style.display = "none"
                     showing = "none"
-                    document.getElementById("button").innerHTML = "More"
+                    document.getElementById("button").innerHTML = "More about the Waterpocket Fold"
                 }
             }
             function change(){
-                document.getElementById("one").src = images[index]
+                document.getElementById("change").src = images[index]
                 index += 1
                 if(index >= images.length){
                     index=0
@@ -134,43 +150,52 @@
         </div>
 
         <div id="two">
-            <h4>That could be you!</h4>
-            <img onmouseover={change()} src="https://getinspiredeveryday.com/wp-content/uploads/2022/03/Things-to-do-in-Capitol-Reef-National-Park-Get-Inspired-Everyday-7.jpg" alt="a"/>
+            <h4>That could be you! - hover</h4>
+            <img id="change" onmouseover={change()} src="https://getinspiredeveryday.com/wp-content/uploads/2022/03/Things-to-do-in-Capitol-Reef-National-Park-Get-Inspired-Everyday-7.jpg" alt="a"/>
         </div>
 
         </div>
 
-        <h3>What the freak is it?</h3>
-        <p>Capitol Reef is located in south-central Utah. it is known for its unique geology, rich cultural history, and spectacular dark night skies. It preserves the Waterpocket Fold, a nearly 100-mile-long geologic monocline, or "wrinkle" in the Earth's crust, that exposes layers of rock dating back millions of years. <a href="#" target="blank_">link</a></p>
-
-        <h3>Thing 8</h3>
-
-        <p>bla bla lba</p>
+        <div id="freak">
+            <h3>What the freak is it?</h3>
+            <p>Capitol Reef is located in south-central Utah. it is known for its unique geology, rich cultural history, and spectacular dark night skies. It includes the  Waterpocket Fold, which is a a nearly 100-mile-long geologic monocline in the Earth's crust. It exposes layers of rock that are 200 million years old. <a href="https://www.nps.gov/care/index.htm" target="blank_">Here</a> is it's officail website you can look at.</p>
+        </div>
+        
+        <div id="why">
+            <h3>Why should I even go?</h3>
+            <p>The park is open year-round and has many differnt things to do.</p>
+        </div>
 
         <div id="list">
             <ul>
-            <li>Tin</li>
-            <li>Pewter</li>
-            <li>Steel</li>
-            <li>Iron</li>
-            <li>Zinc</li>
-            <li>Brasss</li>
+            <li>Hickman Bridge Trail: 1.7 miles round trip leading to a largenatural bridge</li>
+            <li>Cassidy Arch Trail: 3.2-miles round trip hike leading to the top of a large natural arch</li>
+            <li>Grand Wash: about 4.7 miles through narrow canyon with towering walls</li>
+            <li>Cohab Canyon Trail: offers great views of the Fruita area and the Waterpocket Fold</li>
+            <li>Backpacking and Canyoneering, permits are required to stay overnight</li>
+            <li>Biking, Horseback Riding, and Rock Climbing, only in designated areas</li>
             </ul>
         </div>
 
-        <div id="a">
-            <img src="#" alt="a"/>
+        <div id="sheep">
+            <img id="cookie" src="https://www.nps.gov/common/uploads/grid_builder/care/crop16_9/018DF7C0-CD1D-3D66-CDB47299A39D853E.jpg?width=640&quality=90&mode=crop" alt="big horn sheep"/>
         </div>
 
-        <button id="button" onclick ={show()}>More</button>
+        <button id="button" onclick ={show()}>More about the Waterpocket Fold</button>
 
         <div id="hidden">
-            <div><p>hidden text</p></div>
-
-            <div>
-            <img src="#" alt="e"/>
+            <div id="hidden-wrapper">
+            
+            <div id="hidden-text">
+                <p>This is essentially a colossal, petrified wrinkle in the Earth's crust. The Waterpocket Fold acts as a natural barrier to travel, much like an oceanic reef.</p>
             </div>
 
+            <div id="three">
+            <h4>Waterpocket Fold</h4>
+            <img src="https://www.nps.gov/care/planyourvisit/images/Waterpocket-Fold-from-Strike-Valley-Overlook-Jacob-Frank.jpg" alt="Waterpocket Fold"/>
+            </div>
+
+            </div>
         </div>
 
     </body>
