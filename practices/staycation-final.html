@@ -56,7 +56,6 @@
             }
             #list{
                 color:rgb(83, 49, 49);
-                margin: -10px;
             }
             #images{
                 display: grid;
@@ -72,6 +71,7 @@
                 background-color: rgba(34, 78, 75, 0.507);
                 color: white;
                 border-color: rgb(134, 134, 134);
+                text-align: center;
             }
             #hidden{
                 display: none;
@@ -145,13 +145,13 @@
         <div id="images">
 
         <div id="one">
-            <h4>Cool place</h4>
+            <h4>Neat stuff huh</h4>
             <img src="https://capitolreefcountry.com/wp-content/uploads/2021/04/Fruita-District-1200-x-800.jpg" alt="b"/>
         </div>
 
         <div id="two">
             <h4>That could be you! - hover</h4>
-            <img id="change" onmouseover={change()} src="https://getinspiredeveryday.com/wp-content/uploads/2022/03/Things-to-do-in-Capitol-Reef-National-Park-Get-Inspired-Everyday-7.jpg" alt="a"/>
+            <img id="change" onmouseenter={change()} src="https://getinspiredeveryday.com/wp-content/uploads/2022/03/Things-to-do-in-Capitol-Reef-National-Park-Get-Inspired-Everyday-7.jpg" alt="a"/>
         </div>
 
         </div>
@@ -168,10 +168,10 @@
 
         <div id="list">
             <ul>
-            <li>Hickman Bridge Trail: 1.7 miles round trip leading to a largenatural bridge</li>
-            <li>Cassidy Arch Trail: 3.2-miles round trip hike leading to the top of a large natural arch</li>
-            <li>Grand Wash: about 4.7 miles through narrow canyon with towering walls</li>
-            <li>Cohab Canyon Trail: offers great views of the Fruita area and the Waterpocket Fold</li>
+            <li>Hickman Bridge Trail: 1.7 miles leading to a natural bridge</li>
+            <li>Cassidy Arch Trail: 3.2 miles leading to the top of an arch</li>
+            <li>Grand Wash: about 4.7 miles through narrow canyon walls</li>
+            <li>Cohab Canyon Trail: great views of the Fruita area and the Waterpocket Fold</li>
             <li>Backpacking and Canyoneering, permits are required to stay overnight</li>
             <li>Biking, Horseback Riding, and Rock Climbing, only in designated areas</li>
             </ul>
@@ -187,7 +187,7 @@
             <div id="hidden-wrapper">
             
             <div id="hidden-text">
-                <p>This is essentially a colossal, petrified wrinkle in the Earth's crust. The Waterpocket Fold acts as a natural barrier to travel, much like an oceanic reef.</p>
+                <p>This is essentially a colossal, petrified wrinkle in the Earth's crust. The Waterpocket Fold is kind of the backbone of Capitol Reef. It's name come from the small basins, or “waterpockets,” that form in the sandstone as it erodes. When rainwater collects in the tiny pools, it's actually a very improtant part of the park's ecosystem.</p>
             </div>
 
             <div id="three">
